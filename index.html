@@ -23,7 +23,6 @@ body {
   overflow: hidden;
 }
 
-/* Card */
 .card {
   background: rgba(255,255,255,0.85);
   padding: 45px 55px;
@@ -46,7 +45,6 @@ p {
   margin-bottom: 30px;
 }
 
-/* Buttons */
 button {
   padding: 12px 28px;
   font-size: 1.1rem;
@@ -71,7 +69,6 @@ button {
   position: absolute;
 }
 
-/* Cherry blossom petals */
 .petal {
   position: absolute;
   animation: fall linear infinite;
@@ -114,7 +111,6 @@ const noBtn = document.getElementById("no");
 const yesBtn = document.getElementById("yes");
 const music = document.getElementById("bgMusic");
 
-/* Move NO button */
 noBtn.addEventListener("mouseover", () => {
   const x = Math.random() * (window.innerWidth - 120);
   const y = Math.random() * (window.innerHeight - 60);
@@ -122,12 +118,11 @@ noBtn.addEventListener("mouseover", () => {
   noBtn.style.top = `${y}px`;
 });
 
-/* Play music after first interaction */
 document.body.addEventListener("click", () => {
   music.play();
 }, { once: true });
 
-/* YES button ending */
+
 yesBtn.addEventListener("click", () => {
   document.body.innerHTML = `
     <div style="
@@ -141,17 +136,16 @@ yesBtn.addEventListener("click", () => {
       font-family:'Quicksand',sans-serif;
       text-align:center;">
 
-      <h1 style="font-size:3rem;color:#ff5e9c;">You said YES 💕</h1>
+      <h1 style="font-size:3rem;color:#ff5e9c;">YES 💕</h1>
 
       <p style="font-size:1.5rem;">
-        Spring feels warmer with you 🌸✨
+        I love you 🌸✨
       </p>
 
     </div>
   `;
 });
 
-/* Sakura petals generator */
 setInterval(() => {
 
   const petal = document.createElement("div");
